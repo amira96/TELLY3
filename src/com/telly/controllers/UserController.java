@@ -32,4 +32,12 @@ public class UserController {
 	public String showLogout() {
 		return "loggedout";
 	}
+	
+	@RequestMapping("/createaccount")
+	public String createAccount(Model model, Principal principal) {
+		
+		model.addAttribute("user", new User());
+		
+		return "createaccount";
+	}
 }
